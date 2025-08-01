@@ -1,4 +1,4 @@
-# SQL Data Cleaning Project Journey: A Real-World Simulation
+# SQL Data Cleaning Journey: A Real-World Simulation
 
 This project simulates a real-world data cleaning process using SQL and DB Browser for SQLite. It documents how raw, messy data was cleaned step-by-step and prepared for visualization in Power BI — including all the logic, lessons, and challenges encountered along the way.
 

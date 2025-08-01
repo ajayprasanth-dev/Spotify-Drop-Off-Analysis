@@ -1,119 +1,135 @@
-# ✅ SQL Data Cleaning Project Journey
+# SQL Data Cleaning Project Journey: A Real-World Simulation
 
-## 🎯 Goal
-Simulate a real-world data cleaning project using **SQL** and **DB Browser for SQLite** — from raw data to a clean, analysis-ready dataset, and reflect on the technical and mental lessons learned.
+This project simulates a real-world data cleaning process using SQL and DB Browser for SQLite. It documents how raw, messy data was cleaned step-by-step and prepared for visualization in Power BI — including all the logic, lessons, and challenges encountered along the way.
 
----
+## About This Project
 
-## 🧱 Step-by-Step SQL Cleaning Process
+This project is a hands-on simulation of a real data cleaning workflow. The primary aim was to:
 
-### 🔍 Schema Inspection
-- Used `PRAGMA table_info(MOCK_DATA);` to review table structure, columns, and data types.
+- Start from scratch with a messy `.db` file.
+- Clean and transform fields like Email, Subscription_Type, and Last_Login.
+- Document each step in SQL.
+- Connect and analyze the cleaned data using Power BI.
+- Reflect on the full journey as a LinkedIn post.
 
-### 📧 Step 1: Email Cleaning
-- Removed special characters and whitespace using `REPLACE`, `TRIM`, etc.
-- Replaced empty or NULL emails with a placeholder: `unknown@email.com`.
-- Validated format using `LIKE '%@%.%'`.
+## Project Goals
 
-### 💼 Step 2: Subscription_Type Cleaning
-- Removed leading/trailing spaces and special characters.
-- Normalized to Title Case (`basic` → `Basic`, etc.).
-- Removed invalid or empty subscription types.
+- Inspect the Schema: Understand column names and data types before cleaning.
+- Clean Messy Fields: Standardize email, fix date formats, and validate subscription values.
+- Write Reusable SQL: Use clear and readable queries with comments.
+- Save and Document the Process: Make it GitHub-friendly.
+- Reflect and Share: Turn the journey into personal branding content.
 
-### 🕓 Step 3: Last_Login Date Cleaning
-- Faced formats like `05/02/2025`, `5-05-05-2025`, `29-09-2024`.
-- Standardized to `YYYY-MM-DD` using `substr()`, `length()`, and `printf()`.
-- Targeted formats carefully using `LIKE '_-__-__-____'`.
-- Removed unrealistic entries like `0-01-10-2025`.
+## Step-by-Step Process You Followed
 
-### 🔎 Validation
-- Used `SELECT DISTINCT` to verify results.
-- Ensured `Last_Login` has only `YYYY-MM-DD` values.
+### Schema Inspection
 
-### 💾 Final SQL
-- Saved all queries in GitHub-friendly `.sql` file format with inline comments (`--` style).
+- Used `PRAGMA table_info(MOCK_DATA);` to review columns and data types.
 
----
+### Step 1: Email Cleaning
 
-## ⚠️ Challenges Faced
-- `instr()` errors due to wrong usage.
-- Date logic required simplification.
-- Missed edge cases like `0`-prefixed dates.
-- Some strange-looking emails were technically valid — required judgment calls.
+- Removed special characters and whitespace.
+- Replaced empty or NULLs with `unknown@email.com`.
+- Validated using `LIKE '%@%.%'`.
 
----
+### Step 2: Subscription_Type Cleaning
 
-## 🧠 Lessons Learned
-- Always understand your data patterns before cleaning.
-- Test changes using `SELECT` before running `UPDATE`.
-- Use string functions (`substr`, `printf`, `length`) wisely.
-- Never assume — validate everything.
+- Removed leading/trailing spaces and special symbols.
+- Normalized case to Title Case (e.g., basic → Basic).
+- Removed invalid or empty plan types.
 
----
+### Step 3: Last_Login Date Cleaning
 
-# 📘 Power BI + Data Quality Battles
+- Faced formats like 05/02/2025, 5-05-05-2025, 29-09-2024.
+- Standardized all to YYYY-MM-DD using `substr`, `length`, and `printf`.
+- Carefully used `LIKE` to target only messy formats (e.g., `WHERE Last_Login LIKE '_-__-__-____'`).
+- Removed unrealistic dates like 0-01-10-2025 after identifying them.
 
-## 🔹 Step 1 – Connecting DB with Power BI (ODBC)
-- Exported cleaned `.db` file.
-- Installed DLLs and tried 32-bit/64-bit ODBC drivers.
-- Faced repeated values in Power BI's Table View.
-- **Lesson:** ODBC isn't always stable for small projects.
+### Validation
 
-## 🔹 Step 2 – Switching to Excel/CSV Import
-- Converted `.db` to `.csv` for import.
-- Same repeated value issue appeared.
-- Later discovered Power BI **groups** values in Table View.
-- **Lesson:** Always verify with `DISTINCT`, not just visual appearance.
+- Verified results after each step with `SELECT DISTINCT` and `LIKE` filters.
+- Ensured Last_Login has only YYYY-MM-DD formats at the end.
 
-## 🔹 Step 3 – Power Query Cleaning
-- Mistakenly used `Keep Errors` → most data vanished.
-- Replaced errors instead of removing rows.
-- Cleaned dates like `2024-02-30` to `NULL`.
-- Final cleaned `Last_Login` → 99% valid.
-- **Lesson:** Replace > Remove. Keep rows unless truly unusable.
+### Saved All SQL Queries
 
-## 🔹 Step 4 – Row Reduction (1000+ → 657)
-- Dropped rows with critical nulls after careful review.
-- **Lesson:** Reducing rows is about improving quality, not just cutting size.
+- In a clean, GitHub-friendly markdown format with comments using `--` style.
 
-## 🔹 Step 5 – Realizing False Alarms
-- Subscription types and drop-off values were not broken.
-- Power BI Table View **sorts** values visually.
-- **Lesson:** Trust logic, not just what the screen shows.
+## Challenges Faced
 
----
+- `instr()` gave errors due to wrong arguments.
+- Date cleaning logic needed simplification.
+- Missed edge cases like 0-prefixes in day/month values.
+- Emails that looked strange but were still valid — had to make judgment calls.
 
-## 🚀 Final Outcome
+## Lessons You Learned
 
-| Metric                     | Result            |
-|---------------------------|-------------------|
-| Initial Rows              | ~1000             |
-| Final Rows                | 657               |
-| Valid Email Addresses     | ✅ Cleaned         |
-| Last_Login Dates          | ✅ 99% Valid       |
-| Subscription_Type         | ✅ Free, Basic, Premium |
-| Dropped_Off Values        | ✅ TRUE / FALSE    |
+- Always understand your data patterns first.
+- Test using `SELECT` before doing `UPDATE`.
+- Use string functions like `substr`, `printf`, and `length` smartly.
+- Don’t assume — validate everything.
 
----
+## Power BI Cleaning Journey
 
-## 🧠 Strong Takeaways
-- Real-world datasets are always messy — learn to handle uncertainty.
-- String/date cleaning builds deep SQL confidence.
-- Visual tools (like Power BI) may mislead — always double-check your logic.
-- Use versioning and save often — freezes are real.
-- Quality > Quantity: 657 clean rows > 1000+ messy ones.
-- This was not just cleaning — it was a battle with tools, errors, and mindset.
+### Step 1 – First Attempt with DB File
 
----
+- Exported the cleaned SQL data as a .db file.
+- Installed DLL drivers and tried to connect Power BI with ODBC.
+- Faced multiple compatibility issues:
+  - 32-bit vs 64-bit drivers
+  - Installing/uninstalling different ODBC versions
+- Even after connection, Power BI table view showed repeated values in some columns.
+- Lesson: Connecting through ODBC is tricky and not always stable for small projects.
 
-## 🔗 Next Steps
-- Begin Exploratory Data Analysis (EDA).
-- Build a dashboard with insights from the cleaned dataset.
-- Use this project as a learning artifact for resumes and LinkedIn.
+### Step 2 – Switching to Excel / CSV Import
 
----
+- Converted the DB file to Excel/CSV out of frustration.
+- Imported into Power BI again, but the same “repeated values” issue appeared.
+- Spent hours trying to figure out if the dataset was broken — only to later discover:
+  - Power BI groups values in Data View; it wasn’t a real data problem.
+- Lesson: Don’t trust the Table View blindly — always confirm with distinct counts or visuals.
 
-## 🙌 Author: Ajay Prasanth
-_Thanks for reading my SQL + Power BI Data Cleaning Journey._
+### Step 3 – Power Query Cleaning Battles
 
-If you found this helpful, feel free to connect with me on [LinkedIn](https://www.linkedin.com).
+- Opened Power Query Editor.
+- Discovered auto-added steps like Changed Type, Changed Type with Locale, and Keep Errors.
+- Mistakenly used Keep Errors — dataset collapsed to only a few rows.
+- Deleted steps, retried with Replace Errors — null instead.
+- Handled messy dates (e.g., 2024-02-30) by replacing them with nulls.
+- Final Last_Login column: 99% valid, less than 1% null.
+- Lesson: Replace > Remove — never wipe rows unless they’re truly unusable.
+
+### Step 4 – Row Reduction (1000+ → 657)
+
+- Email column had invalid addresses and blanks.
+- Many rows had nulls in critical fields — dropped them carefully.
+- Final dataset reduced from over 1000 to 657 rows, but every row is valid and reliable.
+- Lesson: Row reduction is not random — it’s about improving quality, not shrinking size.
+
+### Step 5 – Final Realization
+
+- Subscription_Type and Dropped_Off weren’t broken.
+- Power BI Table View was simply showing all Premium rows first, then Basic, then Free.
+- Same with Dropped_Off (False first, then True).
+- Lesson: What looks like a problem might just be Power BI’s display logic.
+
+## Strong Lessons From This Journey
+
+- Installing drivers, ODBC, DLLs is valuable but time-consuming. Start simpler next time.
+- Always question the view versus the real data.
+- Keep Power Query steps minimal to avoid freezing.
+- Save work frequently — progress can be lost due to freezes.
+- Real datasets are messy — nulls, invalids, and errors are normal. Handling them builds confidence.
+- Quality is better than quantity — 657 reliable rows are more valuable than 1000 messy ones.
+
+## Final Outcome
+
+- Clean dataset: 657 rows of high quality.
+- Last_Login column fixed with 99% valid entries.
+- Subscription types preserved: Free, Basic, Premium.
+- Drop-offs preserved: TRUE/FALSE.
+- Dataset now ready for EDA and dashboard building.
+
+## Contact
+
+- LinkedIn: https://www.linkedin.com/in/ajayprasanth1
+- Email: ajayprasanth2026@gmail.com

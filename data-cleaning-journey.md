@@ -20,7 +20,7 @@ This project is a hands-on simulation of a real data cleaning workflow. The prim
 - Save and Document the Process: Make it GitHub-friendly.
 - Reflect and Share: Turn the journey into personal branding content.
 
-## Step-by-Step Process You Followed
+## Step-by-Step Process I Followed
 
 ### Schema Inspection
 
@@ -61,7 +61,7 @@ This project is a hands-on simulation of a real data cleaning workflow. The prim
 - Missed edge cases like 0-prefixes in day/month values.
 - Emails that looked strange but were still valid — had to make judgment calls.
 
-## Lessons You Learned
+## Lessons I Learned
 
 - Always understand your data patterns first.
 - Test using `SELECT` before doing `UPDATE`.

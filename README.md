@@ -79,4 +79,4 @@ The **interactive Power BI dashboard** provides a comprehensive view of customer
 ## Contact
 
 - **Email:** ajayprasanth2026@gmail.com
-- **LinkedIn:** [linkedin.com/in/ajayprasanth1](www.linkedin.com/in/ajayprasanth1)
+- **LinkedIn:** [linkedin.com/in/ajayprasanth1](https://www.linkedin.com/in/ajayprasanth1)

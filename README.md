@@ -2,8 +2,8 @@
 
 This project provides a **comprehensive analysis of customer churn** on the music streaming platform **Spotify**. By transforming raw subscription, usage, and complaint data into an **interactive Power BI dashboard**, the project delivers **data-driven insights** to improve retention and maximize customer lifetime value.
 
-[Power BI Dashboard File](./https://github.com/ajayprasanth-dev/Spotify-Drop-Off-Analysis/blob/main/Spotify%20Drop-Off%20analysis.pbix)  
-[Detailed Project Overview](./project_overview.md)
+[Power BI Dashboard File](https://github.com/ajayprasanth-dev/Spotify-Drop-Off-Analysis/blob/main/Spotify%20Drop-Off%20analysis.pbix)  
+[Detailed Project Overview](https://github.com/ajayprasanth-dev/Spotify-Drop-Off-Analysis/blob/main/project_overview.md)
 
 ---
 

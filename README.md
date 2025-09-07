@@ -63,6 +63,20 @@ The **interactive Power BI dashboard** provides a comprehensive view of customer
 **Stakeholder Benefit:** Users can filter by month, subscription tier, usage hours, and complaint severity to uncover actionable insights.
 
 **Screenshot Example:**
+[Dashboard Screenshots](https://github.com/ajayprasanth-dev/Spotify-Drop-Off-Analysis/tree/main/screenshots)
 
-```markdown
-![Dashboard Screenshot](./screenshots/dashboard1.png)
+---
+
+## Future Enhancements
+
+- **Predictive Modeling:** Forecast users likely to churn in upcoming months using machine learning.  
+- **Sentiment Analysis:** Analyze complaint text data to uncover the sentiment behind dissatisfaction.  
+- **A/B Testing:** Test the effectiveness of different retention strategies.  
+- **Enhanced User Segmentation:** Segment users by engagement, region, and subscription history for targeted interventions.  
+
+---
+
+## Contact
+
+- **Email:** ajayprasanth2026@gmail.com  
+- **LinkedIn:** [linkedin.com/in/ajayprasanth1](https://www.linkedin.com/in/ajayprasanth1)

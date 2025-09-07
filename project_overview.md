@@ -123,7 +123,7 @@ The dataset used in this project is simulated to reflect realistic user behavior
 
 **Screenshot Examples:**
 
-[Dashboard Screenshots](./)
+[Dashboard Screenshots](screenshots)
 
 ---
 ## Stakeholder Value

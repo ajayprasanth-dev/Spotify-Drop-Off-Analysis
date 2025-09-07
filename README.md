@@ -1,48 +1,68 @@
-# Spotify-Drop-Off-Analysis
-A strategic data analysis project that uses SQL and Power BI to identify key drivers of customer churn for a music streaming service, "Spotify."
+# Spotify Drop-Off Analysis: A Data-Driven Approach to Customer Churn
 
+This project provides a **comprehensive analysis of customer churn** on the music streaming platform **Spotify**. By transforming raw subscription, usage, and complaint data into an **interactive Power BI dashboard**, the project delivers **data-driven insights** to improve retention and maximize customer lifetime value.
 
-### Key Findings & Strategic Recommendations
+[Power BI Dashboard File](./https://github.com/ajayprasanth-dev/Spotify-Drop-Off-Analysis/blob/main/Spotify%20Drop-Off%20analysis.pbix)  
+[Detailed Project Overview](./https://github.com/ajayprasanth-dev/Spotify-Drop-Off-Analysis/blob/main/project_overview.md)
 
-Based on the in-depth analysis of the provided data, we have identified several critical insights that translate into powerful business recommendations:
+---
 
-- Complaint Resolution is Crucial: A significant number of users who issued complaints—especially critical ones—ultimately dropped off. This strong correlation identifies a direct link between unresolved issues and customer churn.
-    - Recommendation: Implement a prioritized complaint resolution system. Focus on fast-tracking and effectively resolving critical complaints to prevent the loss of high-value users.
+## Project Goals
 
-- High-Usage Users are at Risk: Contrary to the assumption that only inactive users churn, the data reveals that nearly 28% of dropped users were in the "High" usage hours category. This highlights that a good user experience is paramount for all segments.
-    - Recommendation: Develop a proactive "High-Usage User Retention" program. Use targeted communication to solicit feedback from this loyal segment and offer exclusive perks or personalized content to maintain their engagement.
+- **Analyze churn patterns:** Investigate user behavior, subscription tiers, and complaints to uncover trends.  
+- **Identify key drivers:** Determine the factors most strongly influencing customer drop-off.  
+- **Provide actionable insights:** Translate findings into clear, data-backed recommendations for retention.  
+- **Visualize data effectively:** Build an interactive dashboard that stakeholders can explore dynamically.
 
-- Churn is Consistent Across Subscription Tiers: The drop-off count is surprisingly balanced across Free, Basic, and Premium users. This indicates that churn is a systemic issue, not a problem isolated to a single user segment.
-    - Recommendation: Tailor retention strategies for each segment. For Free users, focus on converting them by highlighting the benefits of a paid plan. For Premium users, continuously reinforce the value proposition of their subscription to prevent them from seeking alternatives.
+---
 
-- Drop-Off is a Seasonal Challenge: The analysis shows a noticeable spike in churn during specific months. These seasonal trends are crucial for strategic planning.
-    - Recommendation: Proactively plan targeted re-engagement campaigns in anticipation of these seasonal peaks. Identify at-risk users before these periods and provide incentives to prevent drop-off.
+## Tools & Methodology
 
-### Dashboard Analysis Breakdown
+- **SQL** – Primary tool for data cleaning, transformation, and preparation.  
+- **Excel** – Used for exploratory checks, pivot tables, and validation of SQL-cleaned data.  
+- **Power BI** – Data modeling, DAX measures, and interactive dashboard creation.
 
-The project dashboard is an interactive tool built with Power BI to provide a 360-degree view of customer drop-off. The following key visuals and metrics are included:
+**Approach:**  
+1. Cleaned and standardized raw data using SQL.  
+2. Validated data and performed exploratory analysis using Excel.  
+3. Designed an **interactive dashboard** to analyze churn across complaints, subscription tiers, usage, and seasonal patterns.  
+4. Translated findings into **actionable retention strategies**.
 
-- Total/Active/Dropped Users: The top-level metrics give an immediate snapshot of the platform's health. The high drop-off rate is the primary metric this analysis aims to address.
-- Customer Complaints vs. Drop-Off Outcome: This bar chart is the cornerstone of the analysis, visually demonstrating the strong link between complaint severity and user churn.
-- Dropped Customers by Subscription Type: This horizontal bar chart breaks down churn by subscription tier, revealing that the problem is not limited to any single user segment.
-- Dropped Customers by Usage Hours: A compelling donut chart that challenges the assumption that only low-usage users leave, highlighting the importance of retaining active listeners.
-- Monthly Customer Drop Count: A line chart that provides a clean, visual representation of the seasonal trends in churn, which is critical for planning future retention efforts.
+---
 
-### Methodology & Tools
+## Key Insights & Recommendations
 
-- Data Source: The analysis is based on a simulated dataset representing customer behavior, complaint logs, and subscription information from a music streaming service.
-- Tools Used:
-    - Data Cleaning & Preparation: SQL
-    - Data Analysis & Visualization: Power BI
-- Approach: An exploratory data analysis (EDA) approach was used to identify patterns and correlations, culminating in a final dashboard that communicates the key findings effectively to stakeholders.
+1. **Complaint Resolution is Crucial**  
+   - Users with unresolved or critical complaints had the highest drop-off rate.  
+   - **Recommendation:** Implement a fast-track resolution system for high-priority complaints.
 
-### Future Work & Enhancements
+2. **High-Usage Users Are at Risk**  
+   - Nearly **28% of churned users** were high-usage users, showing that even loyal customers can leave when dissatisfied.  
+   - **Recommendation:** Launch a retention program for active users with personalized offers and exclusive perks.
 
-- Predictive Modeling: Build a machine learning model to predict which users are most likely to drop off in the coming month.
-- Sentiment Analysis: Perform sentiment analysis on the complaint data to better understand the nuances behind customer dissatisfaction.
-- A/B Testing Recommendations: Use these insights to design and propose A/B tests for product changes or marketing campaigns aimed at reducing churn.
+3. **Churn is Consistent Across Subscription Tiers**  
+   - Drop-offs occurred across Free, Basic, and Premium tiers, indicating a **systemic issue**.  
+   - **Recommendation:** Customize retention strategies: upsell Free users and reinforce value for Premium subscribers.
 
-### Contact
+4. **Seasonal Drop-Off Trends**  
+   - Specific months showed higher churn rates.  
+   - **Recommendation:** Plan **seasonal re-engagement campaigns** before high-risk periods using limited-time offers or reminder emails.
 
-- Email: ajayprasanth2026@gmail.com
-- LinkedIn: www.linkedin.com/in/ajayprasanth1
+---
+
+## Dashboard Highlights
+
+The **interactive Power BI dashboard** provides a comprehensive view of customer churn and supports **data-driven decision-making**. Key features:
+
+- **Total, Active, and Dropped Users** – High-level snapshot of platform health.  
+- **Complaints vs. Drop-Off** – Visualizes correlation between complaint severity and churn.  
+- **Churn by Subscription Tier** – Breaks down drop-offs across Free, Basic, and Premium users.  
+- **Churn by Usage Hours** – Highlights at-risk high-usage users.  
+- **Monthly Drop-Off Trends** – Identifies seasonal patterns for planning retention efforts.
+
+**Stakeholder Benefit:** Users can filter by month, subscription tier, usage hours, and complaint severity to uncover actionable insights.
+
+**Screenshot Example:**
+
+```markdown
+![Dashboard Screenshot](./screenshots/dashboard1.png)
